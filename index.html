@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic Online Survey Result Analyzer</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="bg-slate-900 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-5 py-5 flex flex-col md:flex-row
+                    justify-between items-center gap-4">
+
+            <h1 class="text-2xl font-bold">
+                Survey<span class="text-blue-400">Analyzer</span>
+            </h1>
+
+            <div class="flex gap-6 text-sm text-slate-300">
+                <a href="#home" class="hover:text-blue-400 transition">
+                    Home
+                </a>
+
+                <a href="#survey" class="hover:text-blue-400 transition">
+                    Survey
+                </a>
+
+                <a href="#results" class="hover:text-blue-400 transition">
+                    Results
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="text-center px-5 py-16">
+
+        <h2 class="text-4xl md:text-5xl font-bold mb-5">
+            Dynamic Online
+            <span class="text-blue-400">Survey Analyzer</span>
+        </h2>
+
+        <p class="text-slate-400 max-w-2xl mx-auto leading-7">
+            Collect responses, analyze votes and view live percentage
+            breakdowns for every survey question.
+        </p>
+
+    </section>
+
+
+    <main class="max-w-6xl mx-auto px-5 pb-16">
+
+
+        <!-- ================= STAT CARDS ================= -->
+        <section class="grid md:grid-cols-3 gap-5 mb-8">
+
+            <div class="bg-slate-900 border border-slate-800
+                        rounded-2xl p-6 text-center">
+
+                <h3 id="totalVotes"
+                    class="text-4xl font-bold text-blue-400">
+                    0
+                </h3>
+
+                <p class="text-slate-400 mt-2">
+                    Total Responses
+                </p>
+
+            </div>
+
+
+            <div class="bg-slate-900 border border-slate-800
+                        rounded-2xl p-6 text-center">
+
+                <h3 class="text-4xl font-bold text-blue-400">
+                    4
+                </h3>
+
+                <p class="text-slate-400 mt-2">
+                    Survey Questions
+                </p>
+
+            </div>
+
+
+            <div class="bg-slate-900 border border-slate-800
+                        rounded-2xl p-6 text-center">
+
+                <h3 class="text-4xl font-bold text-blue-400">
+                    100%
+                </h3>
+
+                <p class="text-slate-400 mt-2">
+                    Live Analysis
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SURVEY FORM ================= -->
+        <section id="survey"
+            class="bg-slate-900 border border-slate-800
+                   rounded-2xl p-6 md:p-8 mb-8">
+
+            <h2 class="text-2xl font-bold mb-2">
+                Take the Survey
+            </h2>
+
+            <p class="text-slate-400 mb-8">
+                Select one option for each question.
+            </p>
+
+
+            <!-- QUESTION 1 -->
+            <div class="mb-8">
+
+                <h3 class="text-lg font-semibold mb-4">
+                    1. Which technology do you use the most?
+                </h3>
+
+                <div class="space-y-3">
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q1"
+                               value="Mobile"
+                               class="mr-3 accent-blue-500">
+
+                        Mobile
+
+                    </label>
+
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q1"
+                               value="Laptop"
+                               class="mr-3 accent-blue-500">
+
+                        Laptop
+
+                    </label>
+
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q1"
+                               value="Tablet"
+                               class="mr-3 accent-blue-500">
+
+                        Tablet
+
+                    </label>
+
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q1"
+                               value="Desktop"
+                               class="mr-3 accent-blue-500">
+
+                        Desktop
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 2 -->
+            <div class="mb-8">
+
+                <h3 class="text-lg font-semibold mb-4">
+                    2. Which programming language do you prefer?
+                </h3>
+
+                <div class="space-y-3">
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q2"
+                               value="C++"
+                               class="mr-3 accent-blue-500">
+
+                        C++
+
+                    </label>
+
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q2"
+                               value="Java"
+                               class="mr-3 accent-blue-500">
+
+                        Java
+
+                    </label>
+
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q2"
+                               value="Python"
+                               class="mr-3 accent-blue-500">
+
+                        Python
+
+                    </label>
+
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q2"
+                               value="JavaScript"
+                               class="mr-3 accent-blue-500">
+
+                        JavaScript
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 3 -->
+            <div class="mb-8">
+
+                <h3 class="text-lg font-semibold mb-4">
+                    3. How do you prefer learning?
+                </h3>
+
+                <div class="space-y-3">
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q3"
+                               value="Videos"
+                               class="mr-3 accent-blue-500">
+
+                        Video Tutorials
+
+                    </label>
+
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q3"
+                               value="Books"
+                               class="mr-3 accent-blue-500">
+
+                        Books
+
+                    </label>
+
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q3"
+                               value="Practice"
+                               class="mr-3 accent-blue-500">
+
+                        Practical Practice
+
+                    </label>
+
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q3"
+                               value="Classroom"
+                               class="mr-3 accent-blue-500">
+
+                        Classroom
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 4 -->
+            <div class="mb-8">
+
+                <h3 class="text-lg font-semibold mb-4">
+                    4. How satisfied are you with online learning?
+                </h3>
+
+                <div class="space-y-3">
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q4"
+                               value="Excellent"
+                               class="mr-3 accent-blue-500">
+
+                        Excellent
+
+                    </label>
+
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q4"
+                               value="Good"
+                               class="mr-3 accent-blue-500">
+
+                        Good
+
+                    </label>
+
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q4"
+                               value="Average"
+                               class="mr-3 accent-blue-500">
+
+                        Average
+
+                    </label>
+
+
+                    <label class="block bg-slate-950 border border-slate-800
+                                  rounded-lg p-4 cursor-pointer
+                                  hover:border-blue-400 transition">
+
+                        <input type="radio"
+                               name="q4"
+                               value="Poor"
+                               class="mr-3 accent-blue-500">
+
+                        Poor
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+            <button onclick="submitSurvey()"
+                class="bg-blue-500 hover:bg-blue-600
+                       px-7 py-3 rounded-lg font-semibold
+                       transition">
+
+                Submit Survey
+
+            </button>
+
+
+            <p id="message"
+               class="hidden text-green-400 mt-4">
+                ✓ Response submitted successfully!
+            </p>
+
+        </section>
+
+
+        <!-- ================= RESULTS ================= -->
+        <section id="results"
+            class="bg-slate-900 border border-slate-800
+                   rounded-2xl p-6 md:p-8">
+
+            <h2 class="text-2xl font-bold mb-2">
+                Live Survey Results
+            </h2>
+
+            <p class="text-slate-400 mb-8">
+                Percentage breakdown based on submitted responses.
+            </p>
+
+
+            <!-- RESULT QUESTION 1 -->
+            <div class="mb-10">
+
+                <h3 class="text-lg font-semibold mb-5">
+                    1. Most Used Technology
+                </h3>
+
+                <div class="space-y-5">
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Mobile</span>
+                            <span id="q1MobileText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q1Mobile"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700"
+                                 style="width:0%">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Laptop</span>
+                            <span id="q1LaptopText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q1Laptop"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700"
+                                 style="width:0%">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Tablet</span>
+                            <span id="q1TabletText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q1Tablet"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700"
+                                 style="width:0%">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Desktop</span>
+                            <span id="q1DesktopText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q1Desktop"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700"
+                                 style="width:0%">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULT QUESTION 2 -->
+            <div class="mb-10">
+
+                <h3 class="text-lg font-semibold mb-5">
+                    2. Preferred Programming Language
+                </h3>
+
+                <div class="space-y-5">
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>C++</span>
+                            <span id="q2CText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q2C"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Java</span>
+                            <span id="q2JavaText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q2Java"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Python</span>
+                            <span id="q2PythonText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q2Python"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>JavaScript</span>
+                            <span id="q2JavaScriptText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q2JavaScript"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULT QUESTION 3 -->
+            <div class="mb-10">
+
+                <h3 class="text-lg font-semibold mb-5">
+                    3. Preferred Learning Method
+                </h3>
+
+                <div class="space-y-5">
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Video Tutorials</span>
+                            <span id="q3VideosText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q3Videos"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Books</span>
+                            <span id="q3BooksText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q3Books"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Practical Practice</span>
+                            <span id="q3PracticeText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q3Practice"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Classroom</span>
+                            <span id="q3ClassroomText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q3Classroom"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULT QUESTION 4 -->
+            <div class="mb-8">
+
+                <h3 class="text-lg font-semibold mb-5">
+                    4. Online Learning Satisfaction
+                </h3>
+
+                <div class="space-y-5">
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Excellent</span>
+                            <span id="q4ExcellentText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q4Excellent"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Good</span>
+                            <span id="q4GoodText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q4Good"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Average</span>
+                            <span id="q4AverageText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q4Average"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>Poor</span>
+                            <span id="q4PoorText">0% (0)</span>
+                        </div>
+
+                        <div class="h-3 bg-slate-950 rounded-full overflow-hidden">
+                            <div id="q4Poor"
+                                 class="h-full bg-blue-500 rounded-full
+                                        transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESET -->
+            <button onclick="resetSurvey()"
+                class="border border-blue-400 text-blue-400
+                       hover:bg-blue-500 hover:text-white
+                       px-6 py-3 rounded-lg transition">
+
+                Reset Results
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="border-t border-slate-800 text-center
+                   py-6 text-slate-500 text-sm">
+
+        © 2026 SurveyAnalyzer | Dynamic Online Survey Result Analyzer
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        /* ==========================
+           SURVEY DATA
+        ========================== */
+
+        let totalResponses = 0;
+
+        let data = {
+
+            q1: {
+                Mobile: 0,
+                Laptop: 0,
+                Tablet: 0,
+                Desktop: 0
+            },
+
+            q2: {
+                "C++": 0,
+                Java: 0,
+                Python: 0,
+                JavaScript: 0
+            },
+
+            q3: {
+                Videos: 0,
+                Books: 0,
+                Practice: 0,
+                Classroom: 0
+            },
+
+            q4: {
+                Excellent: 0,
+                Good: 0,
+                Average: 0,
+                Poor: 0
+            }
+
+        };
+
+
+        /* ==========================
+           SUBMIT SURVEY
+        ========================== */
+
+        function submitSurvey() {
+
+            let questions = ["q1", "q2", "q3", "q4"];
+
+            let answers = {};
+
+            for (let question of questions) {
+
+                let selected =
+                    document.querySelector(
+                        `input[name="${question}"]:checked`
+                    );
+
+                if (!selected) {
+
+                    alert(
+                        "Please answer all questions."
+                    );
+
+                    return;
+                }
+
+                answers[question] = selected.value;
+            }
+
+
+            // Add votes
+
+            data.q1[answers.q1]++;
+            data.q2[answers.q2]++;
+            data.q3[answers.q3]++;
+            data.q4[answers.q4]++;
+
+
+            totalResponses++;
+
+
+            document.getElementById("totalVotes")
+                .innerText = totalResponses;
+
+
+            updateResults();
+
+
+            // Success message
+
+            let message =
+                document.getElementById("message");
+
+            message.classList.remove("hidden");
+
+
+            setTimeout(function () {
+
+                message.classList.add("hidden");
+
+            }, 2500);
+
+        }
+
+
+        /* ==========================
+           UPDATE ALL RESULTS
+        ========================== */
+
+        function updateResults() {
+
+            updateQuestion(
+                data.q1,
+                {
+                    Mobile: "q1Mobile",
+                    Laptop: "q1Laptop",
+                    Tablet: "q1Tablet",
+                    Desktop: "q1Desktop"
+                }
+            );
+
+
+            updateQuestion(
+                data.q2,
+                {
+                    "C++": "q2C",
+                    Java: "q2Java",
+                    Python: "q2Python",
+                    JavaScript: "q2JavaScript"
+                }
+            );
+
+
+            updateQuestion(
+                data.q3,
+                {
+                    Videos: "q3Videos",
+                    Books: "q3Books",
+                    Practice: "q3Practice",
+                    Classroom: "q3Classroom"
+                }
+            );
+
+
+            updateQuestion(
+                data.q4,
+                {
+                    Excellent: "q4Excellent",
+                    Good: "q4Good",
+                    Average: "q4Average",
+                    Poor: "q4Poor"
+                }
+            );
+
+        }
+
+
+        /* ==========================
+           UPDATE ONE QUESTION
+        ========================== */
+
+        function updateQuestion(dataObject, ids) {
+
+            let total = 0;
+
+
+            // Calculate total votes
+
+            for (let option in dataObject) {
+
+                total += dataObject[option];
+
+            }
+
+
+            // Calculate percentage
+
+            for (let option in dataObject) {
+
+                let count =
+                    dataObject[option];
+
+
+                let percentage = 0;
+
+
+                if (total > 0) {
+
+                    percentage =
+                        Math.round(
+                            (count / total) * 100
+                        );
+
+                }
+
+
+                let barId =
+                    ids[option];
+
+
+                let bar =
+                    document.getElementById(barId);
+
+
+                let text =
+                    document.getElementById(
+                        barId + "Text"
+                    );
+
+
+                // Update bar
+
+                bar.style.width =
+                    percentage + "%";
+
+
+                // Update percentage text
+
+                text.innerText =
+                    percentage +
+                    "% (" +
+                    count +
+                    ")";
+
+            }
+
+        }
+
+
+        /* ==========================
+           RESET SURVEY
+        ========================== */
+
+        function resetSurvey() {
+
+            data = {
+
+                q1: {
+                    Mobile: 0,
+                    Laptop: 0,
+                    Tablet: 0,
+                    Desktop: 0
+                },
+
+                q2: {
+                    "C++": 0,
+                    Java: 0,
+                    Python: 0,
+                    JavaScript: 0
+                },
+
+                q3: {
+                    Videos: 0,
+                    Books: 0,
+                    Practice: 0,
+                    Classroom: 0
+                },
+
+                q4: {
+                    Excellent: 0,
+                    Good: 0,
+                    Average: 0,
+                    Poor: 0
+                }
+
+            };
+
+
+            totalResponses = 0;
+
+
+            document.getElementById("totalVotes")
+                .innerText = "0";
+
+
+            // Uncheck all options
+
+            document.querySelectorAll(
+                'input[type="radio"]'
+            ).forEach(function (radio) {
+
+                radio.checked = false;
+
+            });
+
+
+            // Update results
+
+            updateResults();
+
+        }
+
+
+        // Run when page loads
+
+        updateResults();
+
+    </script>
+
+</body>
+</html>
